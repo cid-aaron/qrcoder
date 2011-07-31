@@ -1,0 +1,18 @@
+package qrcoder;
+
+option java_package = "com.cid.qrcoder";
+option java_outer_classname = "QRCoderProtos";
+
+message QREncodeRequest {
+    required string data = 1;
+    optional int32 size = 2;
+}
+
+message QREncodeResponse {
+    required bool successful = 1;
+    optional bytes qr_code = 2;
+}
+
+service QREncodeService {
+    rpc Encode (QREncodeRequest) returns (QREncodeResponse);
+}
