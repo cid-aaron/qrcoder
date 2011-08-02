@@ -854,6 +854,795 @@ public final class QRCoderProtos {
     // @@protoc_insertion_point(class_scope:qrcoder.QREncodeResponse)
   }
   
+  public interface QRDecodeRequestOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+    
+    // required bytes image = 1;
+    boolean hasImage();
+    com.google.protobuf.ByteString getImage();
+  }
+  public static final class QRDecodeRequest extends
+      com.google.protobuf.GeneratedMessage
+      implements QRDecodeRequestOrBuilder {
+    // Use QRDecodeRequest.newBuilder() to construct.
+    private QRDecodeRequest(Builder builder) {
+      super(builder);
+    }
+    private QRDecodeRequest(boolean noInit) {}
+    
+    private static final QRDecodeRequest defaultInstance;
+    public static QRDecodeRequest getDefaultInstance() {
+      return defaultInstance;
+    }
+    
+    public QRDecodeRequest getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+    
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cid.qrcoder.QRCoderProtos.internal_static_qrcoder_QRDecodeRequest_descriptor;
+    }
+    
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cid.qrcoder.QRCoderProtos.internal_static_qrcoder_QRDecodeRequest_fieldAccessorTable;
+    }
+    
+    private int bitField0_;
+    // required bytes image = 1;
+    public static final int IMAGE_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString image_;
+    public boolean hasImage() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    public com.google.protobuf.ByteString getImage() {
+      return image_;
+    }
+    
+    private void initFields() {
+      image_ = com.google.protobuf.ByteString.EMPTY;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+      
+      if (!hasImage()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+    
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, image_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+    
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+    
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, image_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+    
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+    
+    public static com.cid.qrcoder.QRCoderProtos.QRDecodeRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data).buildParsed();
+    }
+    public static com.cid.qrcoder.QRCoderProtos.QRDecodeRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
+    }
+    public static com.cid.qrcoder.QRCoderProtos.QRDecodeRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data).buildParsed();
+    }
+    public static com.cid.qrcoder.QRCoderProtos.QRDecodeRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
+    }
+    public static com.cid.qrcoder.QRCoderProtos.QRDecodeRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input).buildParsed();
+    }
+    public static com.cid.qrcoder.QRCoderProtos.QRDecodeRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
+    }
+    public static com.cid.qrcoder.QRCoderProtos.QRDecodeRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
+    }
+    public static com.cid.qrcoder.QRCoderProtos.QRDecodeRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
+    }
+    public static com.cid.qrcoder.QRCoderProtos.QRDecodeRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input).buildParsed();
+    }
+    public static com.cid.qrcoder.QRCoderProtos.QRDecodeRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
+    }
+    
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.cid.qrcoder.QRCoderProtos.QRDecodeRequest prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+    
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.cid.qrcoder.QRCoderProtos.QRDecodeRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cid.qrcoder.QRCoderProtos.internal_static_qrcoder_QRDecodeRequest_descriptor;
+      }
+      
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cid.qrcoder.QRCoderProtos.internal_static_qrcoder_QRDecodeRequest_fieldAccessorTable;
+      }
+      
+      // Construct using com.cid.qrcoder.QRCoderProtos.QRDecodeRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+      
+      private Builder(BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+      
+      public Builder clear() {
+        super.clear();
+        image_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+      
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cid.qrcoder.QRCoderProtos.QRDecodeRequest.getDescriptor();
+      }
+      
+      public com.cid.qrcoder.QRCoderProtos.QRDecodeRequest getDefaultInstanceForType() {
+        return com.cid.qrcoder.QRCoderProtos.QRDecodeRequest.getDefaultInstance();
+      }
+      
+      public com.cid.qrcoder.QRCoderProtos.QRDecodeRequest build() {
+        com.cid.qrcoder.QRCoderProtos.QRDecodeRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+      
+      private com.cid.qrcoder.QRCoderProtos.QRDecodeRequest buildParsed()
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        com.cid.qrcoder.QRCoderProtos.QRDecodeRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(
+            result).asInvalidProtocolBufferException();
+        }
+        return result;
+      }
+      
+      public com.cid.qrcoder.QRCoderProtos.QRDecodeRequest buildPartial() {
+        com.cid.qrcoder.QRCoderProtos.QRDecodeRequest result = new com.cid.qrcoder.QRCoderProtos.QRDecodeRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.image_ = image_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+      
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cid.qrcoder.QRCoderProtos.QRDecodeRequest) {
+          return mergeFrom((com.cid.qrcoder.QRCoderProtos.QRDecodeRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+      
+      public Builder mergeFrom(com.cid.qrcoder.QRCoderProtos.QRDecodeRequest other) {
+        if (other == com.cid.qrcoder.QRCoderProtos.QRDecodeRequest.getDefaultInstance()) return this;
+        if (other.hasImage()) {
+          setImage(other.getImage());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+      
+      public final boolean isInitialized() {
+        if (!hasImage()) {
+          
+          return false;
+        }
+        return true;
+      }
+      
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder(
+            this.getUnknownFields());
+        while (true) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              this.setUnknownFields(unknownFields.build());
+              onChanged();
+              return this;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                this.setUnknownFields(unknownFields.build());
+                onChanged();
+                return this;
+              }
+              break;
+            }
+            case 10: {
+              bitField0_ |= 0x00000001;
+              image_ = input.readBytes();
+              break;
+            }
+          }
+        }
+      }
+      
+      private int bitField0_;
+      
+      // required bytes image = 1;
+      private com.google.protobuf.ByteString image_ = com.google.protobuf.ByteString.EMPTY;
+      public boolean hasImage() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      public com.google.protobuf.ByteString getImage() {
+        return image_;
+      }
+      public Builder setImage(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        image_ = value;
+        onChanged();
+        return this;
+      }
+      public Builder clearImage() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        image_ = getDefaultInstance().getImage();
+        onChanged();
+        return this;
+      }
+      
+      // @@protoc_insertion_point(builder_scope:qrcoder.QRDecodeRequest)
+    }
+    
+    static {
+      defaultInstance = new QRDecodeRequest(true);
+      defaultInstance.initFields();
+    }
+    
+    // @@protoc_insertion_point(class_scope:qrcoder.QRDecodeRequest)
+  }
+  
+  public interface QRDecodeResponseOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+    
+    // required bool successful = 1;
+    boolean hasSuccessful();
+    boolean getSuccessful();
+    
+    // optional string data = 2;
+    boolean hasData();
+    String getData();
+  }
+  public static final class QRDecodeResponse extends
+      com.google.protobuf.GeneratedMessage
+      implements QRDecodeResponseOrBuilder {
+    // Use QRDecodeResponse.newBuilder() to construct.
+    private QRDecodeResponse(Builder builder) {
+      super(builder);
+    }
+    private QRDecodeResponse(boolean noInit) {}
+    
+    private static final QRDecodeResponse defaultInstance;
+    public static QRDecodeResponse getDefaultInstance() {
+      return defaultInstance;
+    }
+    
+    public QRDecodeResponse getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+    
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cid.qrcoder.QRCoderProtos.internal_static_qrcoder_QRDecodeResponse_descriptor;
+    }
+    
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cid.qrcoder.QRCoderProtos.internal_static_qrcoder_QRDecodeResponse_fieldAccessorTable;
+    }
+    
+    private int bitField0_;
+    // required bool successful = 1;
+    public static final int SUCCESSFUL_FIELD_NUMBER = 1;
+    private boolean successful_;
+    public boolean hasSuccessful() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    public boolean getSuccessful() {
+      return successful_;
+    }
+    
+    // optional string data = 2;
+    public static final int DATA_FIELD_NUMBER = 2;
+    private java.lang.Object data_;
+    public boolean hasData() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    public String getData() {
+      java.lang.Object ref = data_;
+      if (ref instanceof String) {
+        return (String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        String s = bs.toStringUtf8();
+        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+          data_ = s;
+        }
+        return s;
+      }
+    }
+    private com.google.protobuf.ByteString getDataBytes() {
+      java.lang.Object ref = data_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+        data_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    
+    private void initFields() {
+      successful_ = false;
+      data_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+      
+      if (!hasSuccessful()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+    
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBool(1, successful_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getDataBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+    
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+    
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, successful_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getDataBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+    
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+    
+    public static com.cid.qrcoder.QRCoderProtos.QRDecodeResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data).buildParsed();
+    }
+    public static com.cid.qrcoder.QRCoderProtos.QRDecodeResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
+    }
+    public static com.cid.qrcoder.QRCoderProtos.QRDecodeResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data).buildParsed();
+    }
+    public static com.cid.qrcoder.QRCoderProtos.QRDecodeResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
+    }
+    public static com.cid.qrcoder.QRCoderProtos.QRDecodeResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input).buildParsed();
+    }
+    public static com.cid.qrcoder.QRCoderProtos.QRDecodeResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
+    }
+    public static com.cid.qrcoder.QRCoderProtos.QRDecodeResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
+    }
+    public static com.cid.qrcoder.QRCoderProtos.QRDecodeResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
+    }
+    public static com.cid.qrcoder.QRCoderProtos.QRDecodeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input).buildParsed();
+    }
+    public static com.cid.qrcoder.QRCoderProtos.QRDecodeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
+    }
+    
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.cid.qrcoder.QRCoderProtos.QRDecodeResponse prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+    
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.cid.qrcoder.QRCoderProtos.QRDecodeResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cid.qrcoder.QRCoderProtos.internal_static_qrcoder_QRDecodeResponse_descriptor;
+      }
+      
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cid.qrcoder.QRCoderProtos.internal_static_qrcoder_QRDecodeResponse_fieldAccessorTable;
+      }
+      
+      // Construct using com.cid.qrcoder.QRCoderProtos.QRDecodeResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+      
+      private Builder(BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+      
+      public Builder clear() {
+        super.clear();
+        successful_ = false;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        data_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+      
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+      
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cid.qrcoder.QRCoderProtos.QRDecodeResponse.getDescriptor();
+      }
+      
+      public com.cid.qrcoder.QRCoderProtos.QRDecodeResponse getDefaultInstanceForType() {
+        return com.cid.qrcoder.QRCoderProtos.QRDecodeResponse.getDefaultInstance();
+      }
+      
+      public com.cid.qrcoder.QRCoderProtos.QRDecodeResponse build() {
+        com.cid.qrcoder.QRCoderProtos.QRDecodeResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+      
+      private com.cid.qrcoder.QRCoderProtos.QRDecodeResponse buildParsed()
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        com.cid.qrcoder.QRCoderProtos.QRDecodeResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(
+            result).asInvalidProtocolBufferException();
+        }
+        return result;
+      }
+      
+      public com.cid.qrcoder.QRCoderProtos.QRDecodeResponse buildPartial() {
+        com.cid.qrcoder.QRCoderProtos.QRDecodeResponse result = new com.cid.qrcoder.QRCoderProtos.QRDecodeResponse(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.successful_ = successful_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.data_ = data_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+      
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cid.qrcoder.QRCoderProtos.QRDecodeResponse) {
+          return mergeFrom((com.cid.qrcoder.QRCoderProtos.QRDecodeResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+      
+      public Builder mergeFrom(com.cid.qrcoder.QRCoderProtos.QRDecodeResponse other) {
+        if (other == com.cid.qrcoder.QRCoderProtos.QRDecodeResponse.getDefaultInstance()) return this;
+        if (other.hasSuccessful()) {
+          setSuccessful(other.getSuccessful());
+        }
+        if (other.hasData()) {
+          setData(other.getData());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+      
+      public final boolean isInitialized() {
+        if (!hasSuccessful()) {
+          
+          return false;
+        }
+        return true;
+      }
+      
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder(
+            this.getUnknownFields());
+        while (true) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              this.setUnknownFields(unknownFields.build());
+              onChanged();
+              return this;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                this.setUnknownFields(unknownFields.build());
+                onChanged();
+                return this;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              successful_ = input.readBool();
+              break;
+            }
+            case 18: {
+              bitField0_ |= 0x00000002;
+              data_ = input.readBytes();
+              break;
+            }
+          }
+        }
+      }
+      
+      private int bitField0_;
+      
+      // required bool successful = 1;
+      private boolean successful_ ;
+      public boolean hasSuccessful() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      public boolean getSuccessful() {
+        return successful_;
+      }
+      public Builder setSuccessful(boolean value) {
+        bitField0_ |= 0x00000001;
+        successful_ = value;
+        onChanged();
+        return this;
+      }
+      public Builder clearSuccessful() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        successful_ = false;
+        onChanged();
+        return this;
+      }
+      
+      // optional string data = 2;
+      private java.lang.Object data_ = "";
+      public boolean hasData() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      public String getData() {
+        java.lang.Object ref = data_;
+        if (!(ref instanceof String)) {
+          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+          data_ = s;
+          return s;
+        } else {
+          return (String) ref;
+        }
+      }
+      public Builder setData(String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        data_ = value;
+        onChanged();
+        return this;
+      }
+      public Builder clearData() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        data_ = getDefaultInstance().getData();
+        onChanged();
+        return this;
+      }
+      void setData(com.google.protobuf.ByteString value) {
+        bitField0_ |= 0x00000002;
+        data_ = value;
+        onChanged();
+      }
+      
+      // @@protoc_insertion_point(builder_scope:qrcoder.QRDecodeResponse)
+    }
+    
+    static {
+      defaultInstance = new QRDecodeResponse(true);
+      defaultInstance.initFields();
+    }
+    
+    // @@protoc_insertion_point(class_scope:qrcoder.QRDecodeResponse)
+  }
+  
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_qrcoder_QREncodeRequest_descriptor;
   private static
@@ -864,6 +1653,16 @@ public final class QRCoderProtos {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_qrcoder_QREncodeResponse_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_qrcoder_QRDecodeRequest_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_qrcoder_QRDecodeRequest_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_qrcoder_QRDecodeResponse_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_qrcoder_QRDecodeResponse_fieldAccessorTable;
   
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -876,10 +1675,10 @@ public final class QRCoderProtos {
       "\n\016messages.proto\022\007qrcoder\"-\n\017QREncodeReq" +
       "uest\022\014\n\004data\030\001 \002(\t\022\014\n\004size\030\002 \001(\005\"7\n\020QREn" +
       "codeResponse\022\022\n\nsuccessful\030\001 \002(\010\022\017\n\007qr_c" +
-      "ode\030\002 \001(\0142P\n\017QREncodeService\022=\n\006Encode\022\030" +
-      ".qrcoder.QREncodeRequest\032\031.qrcoder.QREnc" +
-      "odeResponseB \n\017com.cid.qrcoderB\rQRCoderP" +
-      "rotos"
+      "ode\030\002 \001(\014\" \n\017QRDecodeRequest\022\r\n\005image\030\001 " +
+      "\002(\014\"4\n\020QRDecodeResponse\022\022\n\nsuccessful\030\001 " +
+      "\002(\010\022\014\n\004data\030\002 \001(\tB \n\017com.cid.qrcoderB\rQR" +
+      "CoderProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -902,6 +1701,22 @@ public final class QRCoderProtos {
               new java.lang.String[] { "Successful", "QrCode", },
               com.cid.qrcoder.QRCoderProtos.QREncodeResponse.class,
               com.cid.qrcoder.QRCoderProtos.QREncodeResponse.Builder.class);
+          internal_static_qrcoder_QRDecodeRequest_descriptor =
+            getDescriptor().getMessageTypes().get(2);
+          internal_static_qrcoder_QRDecodeRequest_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_qrcoder_QRDecodeRequest_descriptor,
+              new java.lang.String[] { "Image", },
+              com.cid.qrcoder.QRCoderProtos.QRDecodeRequest.class,
+              com.cid.qrcoder.QRCoderProtos.QRDecodeRequest.Builder.class);
+          internal_static_qrcoder_QRDecodeResponse_descriptor =
+            getDescriptor().getMessageTypes().get(3);
+          internal_static_qrcoder_QRDecodeResponse_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_qrcoder_QRDecodeResponse_descriptor,
+              new java.lang.String[] { "Successful", "Data", },
+              com.cid.qrcoder.QRCoderProtos.QRDecodeResponse.class,
+              com.cid.qrcoder.QRCoderProtos.QRDecodeResponse.Builder.class);
           return null;
         }
       };
