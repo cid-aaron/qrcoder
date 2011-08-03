@@ -8,6 +8,17 @@ for the wire format).
 
 There are example clients written in [python](http://www.python.org).
 
+## Pieces
+
+* I chose scala because it's neat.
+* I chose zxing because it appears to be the most mature coding lib
+  out there.
+* I chose protocol buffers because last I checked, thrift isn't all
+  that nice on windows, avro is complex, and messagepack is a bit
+  young.
+* I chose zeromq because I wanted to see how easy it is to use and to
+  support interop between langs/platforms.
+
 ## Requirements
 
 [Scala](http://www.scala-lang.org/downloads)
