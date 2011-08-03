@@ -13,6 +13,11 @@ message QREncodeResponse {
     optional bytes qr_code = 2;
 }
 
-service QREncodeService {
-    rpc Encode (QREncodeRequest) returns (QREncodeResponse);
+message QRDecodeRequest {
+    required bytes image = 1;
+}
+
+message QRDecodeResponse {
+    required bool successful = 1;
+    optional string data = 2;
 }
