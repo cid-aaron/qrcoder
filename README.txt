@@ -19,6 +19,10 @@ on my PATH; I stick all sorts of things in there like
 [curl](http://curl.haxx.se/), helper scripts, and the sbt.bat &
 sbt-launch.jar.
 
+Here's my sbt.bat:
+
+https://gist.github.com/1382ce9e5022c56c8fb0
+
 ## Running
 
 Once you have sbt installed, open a console, and cd into server
